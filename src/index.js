@@ -18,13 +18,13 @@ $(document).ready(function() {
     event.preventDefault();
     let country = $('#country').val();
     let amount = parseInt($('#amount').val());
-    if (!isNaN(amount)){
+    if (!isNaN(amount) && country != 1){
       Exchange.getCurrency(amount,country)
         .then(function(response) {
           getElements(response, amount);
         });
     } else {
-      $('#output').text("Please input a number");
+      $('#output').text("Please select an ammount to exchange and a currency");
     }
   });
   $('#rate').click(function(event) {
