@@ -1,4 +1,4 @@
-import {} from '../src/';
+import {} from '../src/exchange-api.js';
 
 describe ('', () => {
 
