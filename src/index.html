@@ -4,22 +4,25 @@
   <title>US Currency Exchange</title>
 </head>
 <body>
-  <header><h1>US Currency Exchange</h1></header>
+  <header><h1>	<em>	US Currency Exchange</em></h1><img src="assets/images/Earth-spinning.gif" alt="The Earth Spinning"></header>
   <div class="container">
     <form id="currencyExchange">
       <div class="row">
         <div class="col-auto">
           <div class="input-group">
             <span class="input-group-text">$</span>
-            <input type="number" class="form-control" id="amount" min="0" placeholder="Amount (in USD)">
+            <input type="number" class="form-control" id="amount" min="1" max="99999" placeholder="Amount">
             <span class="input-group-text">.00</span>
           </div>
         </div>
         <div class="col-auto">
+          <img src="assets/images/arrow_forward.png" alt="arrow forward">
+        </div>
+        <div class="col-auto">
           <div class="input-group">
-            <label class="input-group-text" id="countryLabel" for="country">Exchange for</label>
+            <label class="input-group-text" id="countryLabel" for="country">Exchange to</label>
             <select class="form-select" id="country">
-              <option selected value="Exchange for">Select a currency</option>
+              <option selected value="Exchange to">Select a currency</option>
               <option value="AED">United Arab Emirates Dirham</option>
               <option value="AFN">Afghan Afghani	Afghanistan</option>
               <option value="ALL">Albanian Lek	Albania</option>
@@ -185,10 +188,15 @@
           </div>
         </div>
       </div>
-      <button class="btn btn-success" id="exchange">Exchange</button>
-      <button class="btn btn-primary" id="rate">See Exchange Rate</button>
+      <div class="row">
+      <button class="btn btn-success col-auto" id="exchange">Exchange</button>
+      <button class="btn btn-primary col-auto" id="rate">See Exchange Rate</button>
+      <div class="col-auto">
+        <div id="output"></div>
+        <div id="error"></div>
+      </div>
+    </div>
     </form>
-    <div id="output"></div>
   </div>
 </body>
 </html>

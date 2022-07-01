@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+body {
+  background-image: url(../assets/images/map.jpeg);
+  font-size: larger;
+}
+
 input { 
   text-align: right; 
 }
+
+header img, header h1 {
+  display: inline-block;
+  height: 8rem;
+  color: aliceblue;
+  text-shadow: 1px 1px 2px rgb(101, 167, 48), 0 0 1em rgb(49, 128, 193), 0 0 0.2em rgb(117, 255, 62);
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 4rem;
+}
+
+header {
+  margin-top: 1rem;
+  margin-left: 25%;
+}
+
+button {
+  margin: 0.6rem;
+}
+
+.row {
+  margin: 5px;
+  padding: 3px;
+  align-self: center;
+}
+
+#error {
+  color: red;
+}
+
+#output {
+  color: aliceblue;
+}
+
