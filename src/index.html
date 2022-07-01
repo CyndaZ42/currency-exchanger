@@ -4,7 +4,22 @@
   <title>US Currency Exchange</title>
 </head>
 <body>
-  <button id="exchange">Exchange</button>
+  <div class="container">
+    <form class="mb-3" id="currencyExchange">
+      <select class="form-control" id="Country">
+        <option value="AED">UAE Dirham</option>
+        <option value="2">Tea</option>
+        <option value="3">Kombucha</option>
+        <option value="4">Water</option>
+      </select>
+      <div class="input-group form-control">
+        <span class="input-group-text">$</span>
+        <input type="number" id="amount" class="" aria-label="Amount (in USD)">
+        <span class="input-group-text">.00</span>
+      </div>
+      <button class="btn-success" id="exchange">Exchange</button>
+    </form>
+  </div>
   <div id="output"></div>
 </body>
 </html>
