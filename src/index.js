@@ -30,4 +30,9 @@ $(document).ready(function() {
   $('#rate').click(function(event) {
     event.preventDefault();
   });
+  const selectCountry = document.querySelector('#country');
+  selectCountry.addEventListener('change', (event) => {
+  const countryLabel = document.querySelector('#countryLabel');
+  countryLabel.textContent = `${event.target.value}`;
+});
 });
