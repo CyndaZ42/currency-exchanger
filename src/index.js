@@ -18,7 +18,7 @@ $(document).ready(function() {
     event.preventDefault();
     let country = $('#country').val();
     let amount = parseInt($('#amount').val());
-    if (!isNaN(amount) && country != 1){
+    if (!isNaN(amount) && country != "Exchange for"){
       Exchange.getCurrency(amount,country)
         .then(function(response) {
           getElements(response, amount);
@@ -32,7 +32,7 @@ $(document).ready(function() {
   });
   const selectCountry = document.querySelector('#country');
   selectCountry.addEventListener('change', (event) => {
-  const countryLabel = document.querySelector('#countryLabel');
-  countryLabel.textContent = `${event.target.value}`;
-});
+    const countryLabel = document.querySelector('#countryLabel');
+    countryLabel.textContent = `${event.target.value}`;
+  });
 });
