@@ -4,19 +4,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Exchange from './exchange-api.js';
 
-function getElements(response) {
+function getElements(response, amount) {
   if (response.result === "success") {
     console.log(response);
+    $('#output').text(`Your ${amount} USD has been exchaned for ${response.conversion_result} ${response.target_code}`);
   } else {
-    console.log(response);
+    $('#output').text(`error: ${response}`);
   }
 }
 
 $(document).ready(function() {
-  $('#exchange').click(function() {
-    Exchange.getCurrency(2,"RUB")
-      .then(function(response) {
-        getElements(response);
-      });
+  $('#exchange').click(function(event) {
+    event.preventDefault();
+    let country = $('#country').val();
+    let amount = parseInt($('#amount').val());
+    if (!isNaN(amount)){
+      Exchange.getCurrency(amount,country)
+        .then(function(response) {
+          getElements(response, amount);
+        });
+    } else {
+      $('#output').text("Please input a number");
+    }
+  });
+  $('#rate').click(function(event) {
+    event.preventDefault();
   });
 });

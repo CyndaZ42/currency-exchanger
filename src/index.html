@@ -12,13 +12,15 @@
           <div class="input-group-prepend">
             <span class="input-group-text">$</span>
           </div>
-          <input type="number" class="form-control" id="amount" placeholder="Amount (in USD)">
+          <input type="number" class="form-control" id="amount" min="0" placeholder="Amount (in USD)">
           <span class="input-group-text">.00</span>
         </div>
       </div>
       <div class="col-auto">
         <div class="input-group">
-          <label class="input-group-text" id="countryLabel" for="country">Exchange for</label>
+          <div class="input-group-prepend"> 
+            <div class="input-group-text" id="countryLabel" for="country">Exchange for</label>
+          </div>
           <select class="form-select" id="country">
             <option value="AED">United Arab Emirates Dirham</option>
             <option value="AFN">Afghan Afghani	Afghanistan</option>
@@ -185,7 +187,8 @@
         </div>
       </div>
       <div class="col-auto">
-        <button class="btn btn-primary" id="exchange">Exchange</button>
+        <button class="btn btn-success" id="exchange">Exchange</button>
+        <button class="btn btn-primary" id="rate">See Exchange Rate</button>
       </div>
     </form>
   </div>
